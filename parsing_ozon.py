@@ -30,6 +30,7 @@ def get_product_page_html_with_selenium(product_codes,message):
     #chrome_options.add_argument("--disable-infobars")
     #chrome_options.add_argument('--disable-web-security')
     # Укажите абсолютный путь к chromedriver.exe на вашем компьютере
+    
     chrome_driver_path = "E:\\projects\\BUS_BUS_BUS\\chromeDriver\\chromedriver.exe"
 
     # Инициализируем объект Service
@@ -187,9 +188,6 @@ def get_product_page_html_with_selenium(product_codes,message):
 	      print('Cena NE IZM propusk'+str(formatted_date))
 
    '''
-#products = ["847017792",'871699796','900767518','524293278','307595402','1151034412']#,'987526976']
-
-#products = products[-1:]
 
 flag = False
 
@@ -198,7 +196,7 @@ def start(message):
     global flag
     flag = not flag
     while flag:
-        with open('1.txt', 'r') as file:
+        with open('id_list.txt', 'r') as file:
                 # Читаем содержимое файла и сохраняем его в переменную content
             content = file.read()
         products = eval(content)
